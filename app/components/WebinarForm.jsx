@@ -59,7 +59,7 @@ export const WebinarForm = () => {
       </form>)
     }
     { error && 
-      (<p className="text-lg text-red-500">Sorry, there was an error with your registration. Please try again later or send an email directly to <a href="mailto: realtor@company.com" className="hover:underline">realtor@company.com</a> mentioning that you'd like to register for the webinar!</p>)
+      (<p className="text-lg text-red-500">Sorry, there was an error with your registration. Please try again later or send an email directly to <a href="mailto: realtor@company.com" className="hover:underline">realtor@company.com</a> mentioning that you&apos;d like to register for the webinar!</p>)
     }
     </>
   )
