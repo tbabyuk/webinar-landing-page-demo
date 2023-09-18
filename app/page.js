@@ -1,113 +1,71 @@
-import Image from 'next/image'
+import { WebinarForm } from "./components/WebinarForm"
 
-export default function Home() {
+export const metadata = {
+    title: "Kisil RES | Webinar",
+    description: "Learn about 'The Smith Manoeuvre Strategy'!",
+}
+
+
+const PageWebinar = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="w-full min-h-[100vh] bg-oresta-primary">
+        <header className="rounded-b-[50%] bg-[url('/images/house.jpg')] bg-center bg-cover pt-2 pb-10 md:pb-20">
+            <h1 className="pt-5 text-center leading-[60px]"><span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">LEVERAGING</span><br /> <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-oresta-light">YOUR MORTGAGE</span><br /><span className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">with the &quot;SMITH MANOEUVRE&quot;</span><br /><span className="text-3xl lg:text-4xl font-semibold text-orange-600">FREE WEBINAR</span></h1>
+        </header>
+        <div className="flex flex-col pt-12 md:flex-row justify-evenly md:-translate-y-[30%]">
+            <figure className="mb-12 md:mb-0 flex flex-col items-center md:-translate-y-[20%]">
+                <div className="w-[200px] h-[200px] rounded-full overflow-hidden mb-4 border-2 border-gray-50">
+                    <img src="/images/christina.jpg" alt="photo of Christina Pentlichuk" className="rounded-full w-[200px] pb-5" />
+                </div>
+                <figcaption className="text-center"><span className="text-gray-50 font-semibold">CHRISTINA PENTLICHUK</span><br /><span className="text-oresta-light font-light text-[0.9rem]">Smith Manoeuvre<br /> Certified Professional</span></figcaption>
+            </figure>
+            <figure className="mb-12 md:mb-0 flex flex-col items-center">
+                <div className="w-[200px] h-[200px] rounded-full overflow-hidden mb-4 border-2 border-gray-50">
+                    <img src="/images/oresta.jpg" alt="photo of Oresta Kisil" className="rounded-full w-[200px] pb-5" />
+                </div>
+                <figcaption className="text-center"><span className="text-gray-50 font-semibold">ORESTA KISIL</span><br /><span className="text-oresta-light font-light text-[0.9rem]">Sales Representative, Keller Williams<br /> Real Estate Associates Brokerage</span></figcaption>
+            </figure>
+            <figure className="mb-12 md:mb-0 flex flex-col items-center md:-translate-y-[20%]">
+                <div className="w-[200px] h-[200px] rounded-full overflow-hidden mb-4 border-2 border-gray-50">
+                    <img src="/images/stef.jpg" alt="photo of Stef Edwards" className="rounded-full w-[200px] pb-5" />
+                </div>
+                <figcaption className="text-center"><span className="text-gray-50 font-semibold">STEF EDWARDS</span><br /><small className="text-oresta-light font-light text-[0.9rem]">Smith Manoeuvre<br /> Certified Professional</small></figcaption>
+            </figure>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="date py-16 bg-oresta-light min-h-[100px] text-center">
+            <p className="text-xl md:text-2xl font-light mb-10">This webinar will take place on:</p>
+            <p className="text-2xl md:text-4xl font-semibold mb-10">Wednesday, Sept. 27, 2023</p>
+            <p className="text-2xl md:text-4xl font-semibold">7:30-8:45pm (EDT)</p>
+        </div>
+        <div className="date px-5 py-16 bg-oresta-primary min-h-[300px] text-center">
+            <p className="text-xl md:text-2xl font-light text-gray-50 mb-16">To register and reserve your spot, simply fill out your name and email address below:</p>
+            <WebinarForm />
+        </div>
+        <div className="min-h-[200px] py-16 bg-oresta-light px-5 sm:px-14 lg:px-28">
+            <div className="grid md:grid-cols-2 gap-10 leading-8 text-oresta-primary">
+                <div className="mb-16 md:mb-0 md:px-5 text-center">
+                    <h3 className="text-xl font-semibold mb-6 xl:px-24">The Smith Manoeuvre Strategy</h3>
+                    <p>A legal tax strategy in Canada that enables homeowners to make the interest on their residential mortgage tax-deductible.</p>
+                </div>
+                <div className="text-center md:px-5 xl:px-24">
+                    <h3 className="text-xl font-semibold mb-6">Tax Benefits & Amortization Reduction</h3>
+                    <p>Learn how to reduce the mortgage&apos;s amortization period, helping you become debt-free sooner.</p>
+                </div>
+            </div>
+        </div>
+        <footer className="min-h-[100px] py-8 bg-gray-50 flex flex-col justify-between sm:flex-row sm:justify-evenly">
+            <div className="grid place-items-center">
+                <img src="/images/kw_logo.jpg" alt="Keller Williams logo" className="w-[70%]" />
+            </div>
+            <div className="grid place-items-center">
+                <img src="/images/ok_logo.jpg" alt="Kisil Reasl Estate logo" className="w-[70%]" />
+            </div>
+            <div className="grid place-items-center">
+                <img src="/images/vg_logo.jpg" alt="Vine Group logo" className="w-[70%]" />
+            </div>
+        </footer>
+    </div>
   )
 }
+
+export default PageWebinar
